@@ -28,11 +28,11 @@
     </header>
     <main>
       <div class="goBack">
-        <img src="..//../assets/icon-arrow-left.svg" alt="arrow left" />
+        <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
         <span>Go back</span>
       </div>
       <h3>New Invoice</h3>
-      <p>Bill From</p>
+      <p class="billTitle">Bill From</p>
       <form action="">
         <div class="labelAndInput">
           <label for="streetAdress">Street Address</label>
@@ -54,7 +54,7 @@
           <input type="text" name="country" />
         </div>
 
-        <p>Bill to</p>
+        <p class="billTitle">Bill to</p>
         <div class="labelAndInput">
           <label for="clientName">Client’s Name</label>
           <input type="text" name="clientName" />
@@ -96,7 +96,7 @@
           <input type="text" name="projectDescription" />
         </div>
 
-        <p>Item List</p>
+        <p class="itemList">Item List</p>
         <div class="itemContainer">
           <div class="labelAndInput">
             <label for="itemName">Item Name</label>
@@ -128,13 +128,16 @@
           </div>
         </div>
         <button class="addNewItem">+ Add New Item</button>
-        <div class="buttonsContainer">
-          <button class="discardBtn">Discard</button>
-          <button class="draftBtn">Save as Draft</button>
-          <button class="saveBtn">Save & Send</button>
-        </div>
       </form>
     </main>
+    <footer>
+      <div class="linearBoxDiv"></div>
+      <div class="buttonsContainer">
+        <button class="discardBtn">Discard</button>
+        <button class="draftBtn">Save as Draft</button>
+        <button class="saveBtn">Save & Send</button>
+      </div>
+    </footer>
     <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
 
     <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->

@@ -2,6 +2,7 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-family: League Spartan;
 }
 
 header {
@@ -58,8 +59,14 @@ main {
 }
 
 .goBack {
-  display: flex;
-  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+}
+
+.goBack img {
+  margin-right: 24px;
 }
 
 .labelAndInput {
@@ -83,7 +90,6 @@ main {
 label {
   /* opacity: 0.5; */
   color: #7e88c3;
-  font-family: League Spartan;
   font-size: 13px;
   font-weight: 500;
   line-height: 15px;
@@ -96,7 +102,6 @@ input {
   box-sizing: border-box;
   border-radius: 5px;
   border: 1px solid #dfe3fa;
-  font-family: League Spartan;
   font-size: 15px;
   font-weight: 700;
   line-height: 15px;
@@ -131,12 +136,99 @@ input {
 }
 
 .quantityTotalPrice {
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
 }
 
 .quantityTotalPrice img {
+  /* width: 100%;
+  height: 100%; */
+}
+
+.billTitle {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  color: #7c5dfa;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.5px;
+  margin: 26px 0 22px 0;
+}
+
+.buttonsContainer {
+  display: flex;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 91px;
+}
+
+.discardBtn {
+  background-color: #f9fafe;
+  color: #7e88c3;
+}
+
+.draftBtn {
+  background-color: #373b53;
+  color: #7e88c3;
+}
+
+.saveBtn {
+  background-color: #7c5dfa;
+  color: #ffffff;
+}
+
+.saveBtn,
+.draftBtn,
+.discardBtn {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  border: 0;
+  padding: 18px 15px 15px 16px;
+  border-radius: 30px;
+}
+
+.linearBoxDiv {
+  height: 64px;
+  /* position: absolute;
+  top: 150px; */
   width: 100%;
-  height: 100%;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.0001) 0%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.addNewItem {
+  padding: 18px 107px 15px 107px;
+  background-color: #f9fafe;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  text-align: center;
+  border: 0;
+  border-radius: 30px;
+  color: #7e88c3;
+  margin-top: 48px;
+}
+
+.itemList {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.375px;
+  color: #777f98;
+  margin-top: 69px;
 }
