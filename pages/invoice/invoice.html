@@ -27,14 +27,84 @@
       </div>
     </header>
 
-    <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
-
-    <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
-    <main>
+    <div class="invoiceView">
       <div class="goBack">
         <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
         <span>Go back</span>
       </div>
+      <div class="statusBox">
+        <p>Status</p>
+        <div class="statusBox-state">
+          <div class="oval"></div>
+          <p>Pending</p>
+        </div>
+      </div>
+      <div class="invoiceSummary">
+        <h1>#XM9141</h1>
+        <p class="projectDescription">Graphic Design</p>
+        <div class="adressFrom">
+          <p class="streetAdress">19 Union Terrace</p>
+          <p class="city">London</p>
+          <p class="postCode">E1 3EZ</p>
+          <p class="country">United Kingdom</p>
+        </div>
+        <div class="billToBox">
+          <div class="invoiceDatesBox">
+            <div class="invoiceDateBox">
+              <p>Invoice Date</p>
+              <p class="invoiceDate">21 Aug 2021</p>
+            </div>
+            <div class="paymentDue">
+              <p>Payment Due</p>
+              <p class="paymentTerms">20 Sep 2021</p>
+            </div>
+          </div>
+          <div class="billToDetailsBox">
+            <p class="billToTitle">Bill To</p>
+            <p class="clientName">Alex Grim</p>
+            <p class="toStreetAdress">84 Church Way</p>
+            <p class="toCity">Bradford</p>
+            <p class="toPostCode">BD1 9PB</p>
+            <p class="toCountry">United Kingdom</p>
+          </div>
+        </div>
+        <div class="sentToEmailBox">
+          <p class="sentToTitle">Sent to</p>
+          <p class="clientEmail">alexgrim@mail.com</p>
+        </div>
+        <div class="orderSummaryBox">
+          <div class="titleAndUnitBox">
+            <p class="itemName">Banner Design</p>
+            <p class="qty">1 x £ 156.00</p>
+          </div>
+          <div class="priceBoxCont"><p class="total">£ 156.00</p></div>
+        </div>
+        <div class="orderSummaryBox">
+          <div class="titleAndUnitBox">
+            <p class="itemName">Banner Design</p>
+            <p class="qty">1 x £ 156.00</p>
+          </div>
+          <div class="priceBoxCont"><p class="total">£ 156.00</p></div>
+        </div>
+        <div class="orderTotalBox">
+          <div class="grandTotalBox">
+            <p>Grand Total</p>
+            <p class="grandTotal">£ 556.00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="buttonsContainer2">
+        <button class="editBtn">Edit</button>
+        <button class="deleteBtn">Delete</button>
+        <button class="paidBtn">Mark as Paid</button>
+      </div>
+    </footer>
+    <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
+
+    <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
+    <main>
       <h3>New Invoice</h3>
       <p class="billTitle">Bill From</p>
       <form action="">
