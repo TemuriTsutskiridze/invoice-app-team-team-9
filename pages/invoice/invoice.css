@@ -55,8 +55,8 @@ main {
   font-weight: 700;
   line-height: 15px;
   letter-spacing: -0.25px;
-  margin-top: 33px;
-  margin-left: 24px;
+  padding-top: 33px;
+  padding-bottom: 31px;
 }
 
 .goBack img {
@@ -138,21 +138,44 @@ h3 {
   margin: 26px 0 22px 0;
 }
 
-.buttonsContainer {
+.buttonsContainer,
+.buttonsContainer2 {
   display: flex;
   gap: 7px;
   align-items: center;
   justify-content: center;
   position: relative;
   height: 91px;
+}
+
+.buttonsContainer {
   display: none;
 }
 
-.discardBtn {
+.saveBtn,
+.draftBtn,
+.discardBtn,
+.editBtn,
+.deleteBtn,
+.paidBtn {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 15px;
+  letter-spacing: -0.25px;
+  border: 0;
+  padding: 18px 15px 15px 16px;
+  border-radius: 30px;
+}
+
+.discardBtn,
+.editBtn {
   background-color: #f9fafe;
   color: #7e88c3;
 }
 
+.editBtn {
+  padding: 18px 28px 15px;
+}
 .draftBtn {
   background-color: #373b53;
   color: #7e88c3;
@@ -163,22 +186,21 @@ h3 {
   color: #ffffff;
 }
 
-.saveBtn,
-.draftBtn,
-.discardBtn {
-  font-size: 15px;
-  font-weight: 700;
-  line-height: 15px;
-  letter-spacing: -0.25px;
-  border: 0;
-  padding: 18px 15px 15px 16px;
-  border-radius: 30px;
+.deleteBtn {
+  background-color: #ec5757;
+  color: #ffffff;
+  padding: 18px 25px 15px;
+}
+
+.paidBtn {
+  background-color: #7c5dfa;
+  color: #ffffff;
+  padding: 18px 28px 15px;
 }
 
 .linearBoxDiv {
   height: 64px;
   display: none;
-
   width: 100%;
   background-image: linear-gradient(
     180deg,
@@ -322,6 +344,7 @@ h3 {
 
 .sentToEmailBox {
   margin-top: 32px;
+  margin-bottom: 38px;
   display: flex;
   flex-direction: column;
   gap: 13px;
