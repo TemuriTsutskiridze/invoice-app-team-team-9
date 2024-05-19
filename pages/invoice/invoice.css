@@ -47,7 +47,6 @@ header {
 
 main {
   padding: 0 24px 22px;
-  display: none;
 }
 
 .goBack {
@@ -208,11 +207,11 @@ h3 {
   );
 }
 
-.linearBoxDiv,
+/* .linearBoxDiv,
 main,
 .buttonsContainer {
   display: none;
-}
+} */
 
 .addNewItem {
   padding: 18px 107px 15px 107px;
@@ -405,6 +404,10 @@ main,
   color: #ffffff;
 }
 
+.input-dark-mode-bgc {
+  background-color: #252945;
+}
+
 .label-dark-mode {
   color: #888eb0;
 }
@@ -427,4 +430,12 @@ main,
 
 .dark-mode-dark-blue {
   color: #7e88c3;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
 }

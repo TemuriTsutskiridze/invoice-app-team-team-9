@@ -31,7 +31,7 @@
       </div>
     </header>
 
-    <div class="invoiceView">
+    <div class="invoiceView displayBlock">
       <div class="goBack">
         <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
         <span>Go back</span>
@@ -99,16 +99,18 @@
       </div>
     </div>
     <footer>
-      <div class="buttonsContainer2">
-        <button class="editBtn">Edit</button>
-        <button class="deleteBtn">Delete</button>
-        <button class="paidBtn">Mark as Paid</button>
+      <div class="buttonsBox2 displayBlock">
+        <div class="buttonsContainer2">
+          <button class="editBtn">Edit</button>
+          <button class="deleteBtn">Delete</button>
+          <button class="paidBtn">Mark as Paid</button>
+        </div>
       </div>
     </footer>
     <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
 
     <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
-    <main>
+    <main class="displayNone">
       <h3>Edit #XM9141</h3>
       <p class="billTitle">Bill From</p>
       <form action="">
@@ -209,10 +211,12 @@
       </form>
     </main>
     <footer>
-      <div class="linearBoxDiv"></div>
-      <div class="buttonsContainer">
-        <button class="cancelBtn">Cancel</button>
-        <button class="saveChangesBtn">Save Changes</button>
+      <div class="linearBoxDiv displayNone"></div>
+      <div class="buttonsBox displayNone">
+        <div class="buttonsContainer">
+          <button class="cancelBtn">Cancel</button>
+          <button class="saveChangesBtn">Save Changes</button>
+        </div>
       </div>
     </footer>
   </body>
