@@ -4,8 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./shared/header.css" />
+    <link rel="stylesheet" href="./pages/invoice/invoice.css" />
     <link rel="stylesheet" href="styles.css" />
+    <script
+      src="../invoice-app-team-team-9/shared/create-edit-invoice/createEditInvoice.js"
+      defer
+    ></script>
     <script src="./script.js" defer></script>
+
     <title>Document</title>
   </head>
 
@@ -26,9 +32,9 @@
       </div>
       <!-- aqamde aris mobail versiis headeris divi, romeli unda gadavitano marcxena mxares tabze da desktopbze -->
 
-      <div class="header-main">
+      <div class="header-main displayFlex">
         <div class="invoices">
-          <h1>Invoices</h1>
+          <h1 class="h1">Invoices</h1>
           <p>7 invoices</p>
         </div>
 
@@ -48,7 +54,7 @@
       </div>
     </header>
 
-    <main>
+    <main class="indexMain displayBlock">
       <div class="invoice1">
         <div class="code-name">
           <span>#RT3080</span>
@@ -71,5 +77,114 @@
     </main>
     <!-- ინვოისების ჩამონათვალის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
     <!-- ინვოისის შექმნის სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
+    <main class="displayNone createInvoiceMain">
+      <h3>Create Invoice</h3>
+      <p class="billTitle">Bill From</p>
+      <form action="">
+        <div class="labelAndInput">
+          <label for="streetAdress">Street Address</label>
+          <input type="text" name="streetAdress" />
+        </div>
+
+        <div class="cityAndPostCode">
+          <div class="labelAndInput">
+            <label for="city">City</label>
+            <input type="text" name="city" />
+          </div>
+          <div class="labelAndInput">
+            <label for="postCode">Post Code</label>
+            <input type="text" name="postCode" />
+          </div>
+        </div>
+        <div class="labelAndInput">
+          <label for="country">Country</label>
+          <input type="text" name="country" />
+        </div>
+
+        <p class="billTitle">Bill to</p>
+        <div class="labelAndInput">
+          <label for="clientName">Client’s Name</label>
+          <input type="text" name="clientName" />
+        </div>
+        <div class="labelAndInput">
+          <label for="clientEmail">Client’s Email</label>
+          <input type="text" name="clientEmail" />
+        </div>
+        <div class="labelAndInput">
+          <label for="toStreetAdress">Street Address</label>
+          <input type="text" name="toStreetAdress" />
+        </div>
+
+        <div class="cityAndPostCode">
+          <div class="labelAndInput">
+            <label for="toCity">City</label>
+            <input type="text" name="toCity" />
+          </div>
+          <div class="labelAndInput">
+            <label for="toPostCode">Post Code</label>
+            <input type="text" name="toPostCode" />
+          </div>
+        </div>
+        <div class="labelAndInput">
+          <label for="toCountry">Country</label>
+          <input type="text" name="toCountry" />
+        </div>
+
+        <div class="labelAndInput">
+          <label for="invoiceDate">Invoice Date</label>
+          <input type="date" name="invoiceDate" />
+        </div>
+        <div class="labelAndInput">
+          <label for="paymentTerms">Payment Terms</label>
+          <input type="text" name="paymentTerms" />
+        </div>
+        <div class="labelAndInput">
+          <label for="projectDescription">Project Description</label>
+          <input type="text" name="projectDescription" />
+        </div>
+
+        <p class="itemList">Item List</p>
+        <div class="itemContainer">
+          <div class="labelAndInput">
+            <label for="itemName">Item Name</label>
+            <input type="text" name="itemName" />
+          </div>
+          <div class="qtyTotalPriceContainer">
+            <div class="quantityTotalPrice">
+              <div class="labelAndInput qtyBox">
+                <label class="qtyBox" for="qty">Qty.</label>
+                <input type="text" name="qty" />
+              </div>
+
+              <div class="labelAndInput">
+                <label for="price ">Price</label>
+                <input class="priceBox" type="text " name="price" />
+              </div>
+
+              <div class="labelAndInput">
+                <label for="total">Total</label>
+                <input
+                  class="totalBox"
+                  type="text"
+                  placeholder="150"
+                  name="total"
+                />
+              </div>
+              <img src="../../assets/icon-delete.svg" alt="delete button" />
+            </div>
+          </div>
+        </div>
+        <button class="addNewItem">+ Add New Item</button>
+      </form>
+    </main>
+    <footer>
+      <div class="linearBoxDiv displayNone"></div>
+      <div class="buttonsBox displayNone">
+        <div class="buttonsContainer">
+          <button class="cancelBtn">Cancel</button>
+          <button class="saveChangesBtn">Save Changes</button>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
