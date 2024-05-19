@@ -47,6 +47,7 @@ header {
 
 main {
   padding: 0 24px 22px;
+  display: none;
 }
 
 .goBack {
@@ -134,7 +135,7 @@ h3 {
   font-weight: 700;
   line-height: 32px;
   letter-spacing: -0.5px;
-  margin: 26px 0 22px 0;
+  padding: 26px 0 22px 0;
 }
 
 .buttonsContainer,
@@ -207,11 +208,11 @@ h3 {
   );
 }
 
-/* .linearBoxDiv,
+.linearBoxDiv,
 main,
 .buttonsContainer {
   display: none;
-} */
+}
 
 .addNewItem {
   padding: 18px 107px 15px 107px;
@@ -388,7 +389,34 @@ main,
   letter-spacing: -0.5px;
 }
 
-.invoiceView,
+/* .invoiceView,
 .buttonsContainer2 {
   display: none;
+} */
+
+.dark-mode {
+  background-color: #141625;
+  color: #ffffff;
+}
+
+.input-dark-mode {
+  background-color: #252945;
+  border: 1px solid #252945;
+  color: #ffffff;
+}
+
+.label-dark-mode {
+  color: #888eb0;
+}
+
+.invoice-dark-mode {
+  background-color: #1e2139;
+}
+
+.dark-mode-white {
+  color: #ffffff;
+}
+
+.dark-mode-light {
+  color: #dfe3fa;
 }
