@@ -420,3 +420,11 @@ main,
 .dark-mode-light {
   color: #dfe3fa;
 }
+
+.dark-mode-dark {
+  background-color: #0c0e16;
+}
+
+.dark-mode-dark-blue {
+  color: #7e88c3;
+}
