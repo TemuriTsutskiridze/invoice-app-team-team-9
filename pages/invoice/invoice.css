@@ -5,46 +5,6 @@
   font-family: League Spartan;
 }
 
-header {
-  background-color: #373b53;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 0;
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-
-  margin-right: 24px;
-}
-
-.logoContainer div {
-  padding: 23px 22px;
-  background-image: linear-gradient(
-    to bottom,
-    #fa5dc6,
-    #e862d7,
-    #d168e6,
-    #b570f4,
-    #9277ff
-  );
-  border-radius: 0 30px 30px 0;
-}
-
-.avatarContainer img {
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-}
-.avatarContainer {
-  border-left: 2px solid #494e6e;
-  padding: 20px 24px;
-}
-
 main {
   padding: 0 24px 22px;
 }
