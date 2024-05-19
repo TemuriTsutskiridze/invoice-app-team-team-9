@@ -12,9 +12,10 @@ header{
     font-family: "League Spartan", sans-serif;
 display: flex;
 flex-direction: column;
-min-height: 100vh;
+background-color: #f8f8fb;
 }
 .header-div{
+    min-width: 37.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -79,7 +80,7 @@ margin-right: auto;
 }
 .filter-button{
     border: none;
-    background-color: white;
+    background-color: #f8f8fb;
     font-size: 1.5rem;
     font-weight: bold;
     color: #0c0e16;
@@ -112,7 +113,7 @@ margin-right: auto;
    display: flex;
    align-items: center;
     justify-content:center;
-     background-color: white;
+    background-color: #f8f8fb;
     position: absolute;
     width: 32px;
    height: 32px;
