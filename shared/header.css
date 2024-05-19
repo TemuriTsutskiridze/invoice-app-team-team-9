@@ -8,7 +8,7 @@
 html {
   font-size: 62.5%;
 }
-.mainHeader {
+header {
   font-family: "League Spartan", sans-serif;
   display: flex;
   flex-direction: column;
@@ -22,6 +22,7 @@ html {
   width: 100%;
   height: 7.2rem;
   background-color: #373b53;
+  justify-content: space-between;
 }
 .header-logo {
   display: flex;
@@ -37,12 +38,18 @@ html {
   height: 3.2rem;
   border-radius: 50%;
 }
+.avatar-moon {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: end;
+}
 
 .moon {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 16rem;
+  margin-right: 2.4rem;
 }
+
 .avatar-cont {
   width: 8rem;
   border-left: 0.2rem solid #494e6e;
@@ -85,14 +92,7 @@ html {
 .arrow-down {
   margin-right: 1.2rem;
 }
-/* .new-div p{
-    left: 2rem;
-    border: none;
-    background-color: #7c5dfa;
-    color: white;
-    font-size: 1.5rem;
-  font-weight: bold;
-} */
+
 .new-div {
   padding: 0.6rem;
   width: 9rem;
@@ -119,44 +119,4 @@ html {
   color: white;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.headerInvoice {
-  background-color: #373b53;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 0;
-}
-
-.logoContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-
-  margin-right: 24px;
-}
-
-.logoContainer div {
-  padding: 23px 22px;
-  background-image: linear-gradient(
-    to bottom,
-    #fa5dc6,
-    #e862d7,
-    #d168e6,
-    #b570f4,
-    #9277ff
-  );
-  border-radius: 0 30px 30px 0;
-}
-
-.avatarContainer img {
-  height: 32px;
-  width: 32px;
-  border-radius: 50%;
-}
-.avatarContainer {
-  border-left: 2px solid #494e6e;
-  padding: 20px 24px;
 }

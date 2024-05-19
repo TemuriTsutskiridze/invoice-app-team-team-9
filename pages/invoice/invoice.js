@@ -1,4 +1,4 @@
-let moon = document.querySelector(".moonIcon");
+let moon = document.querySelector(".moon");
 let label = document.querySelectorAll("label");
 let buttonsContainer = document.querySelector(".buttonsContainer");
 let linearBoxDiv = document.querySelector(".linearBoxDiv");
