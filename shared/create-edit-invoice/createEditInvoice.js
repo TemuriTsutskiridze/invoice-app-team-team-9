@@ -11,11 +11,7 @@ let statusBox = document.querySelector(".statusBox");
 let invoiceSummary = document.querySelector(".invoiceSummary");
 let invoiceTitle = document.querySelector(".invoiceTitle");
 let invoiceDate = document.querySelector(".invoiceDate");
-let paymentTerms = document.querySelector(".paymentTerms");
 let clientName = document.querySelector(".clientName");
-let clientEmail = document.querySelector(".clientEmail");
-let itemName = document.querySelectorAll(".itemName");
-let total = document.querySelectorAll(".total");
 let orderSummaryBox = document.querySelectorAll(".orderSummaryBox");
 let orderTotalBox = document.querySelector(".orderTotalBox");
 let buttonsContainer2 = document.querySelector(".buttonsContainer2");
@@ -26,6 +22,24 @@ let indexMain = document.querySelector(".indexMain");
 let createInvoiceMain = document.querySelector(".createInvoiceMain");
 let headerMain = document.querySelector(".header-main");
 
+//input selection
+
+let streetAddress = document.querySelector('[name="streetAdress"]');
+let city = document.querySelector('[name="city"]');
+let postCode = document.querySelector('[name="postCode"]');
+let country = document.querySelector('[name="country"]');
+let clientEmail = document.querySelector('[name="clientEmail"]');
+let toStreetAdress = document.querySelector('[name="toStreetAdress"]');
+let toCity = document.querySelector('[name="toCity"]');
+let toPostCode = document.querySelector('[name="toPostCode"]');
+let toCountry = document.querySelector('[name="toCountry"]');
+let paymentTerms = document.querySelector('[name="paymentTerms"]');
+let projectDescription = document.querySelector('[name="projectDescription"]');
+let itemName = document.querySelector('[name="itemName"]');
+let qty = document.querySelector('[name="qty"]');
+let price = document.querySelector('[name="price"]');
+let total = document.querySelector('[name="total"]');
+streetAddress.style.color = "red";
 //for dark mode functionality
 // moon.addEventListener("click", () => {
 //   input.forEach((el) => el.classList.toggle("input-dark-mode"));
