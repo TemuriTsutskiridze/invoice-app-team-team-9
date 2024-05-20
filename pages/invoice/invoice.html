@@ -12,25 +12,33 @@
     <link rel="stylesheet" href="../../shared/header.css" />
     <link rel="stylesheet" href="./invoice.css" />
     <script src="./invoice.js" defer></script>
+
     <title>Document</title>
   </head>
   <body>
-    <header>
-      <div class="logoContainer">
-        <div><img src="../../assets/logo.svg" alt="logo" /></div>
-
-        <img src="../../assets/icon-moon.svg" alt="moon icon" />
+    <header class="mainHeader">
+      <div class="header-div">
+        <div class="header-logo">
+          <img src="../../assets/logo.svg" alt="icon" />
+        </div>
+        <img class="moon" src="../../assets/icon-moon.svg" alt="icon-moon" />
+        <div class="avatar-cont">
+          <img
+            class="avatar"
+            src="../../assets/image-avatar.jpg"
+            alt="image-avatar"
+          />
+        </div>
       </div>
-
-      <div class="avatarContainer">
-        <img src="../../assets/image-avatar.jpg" alt="avatar" />
-      </div>
+      <!-- aqamde aris mobail versiis headeris divi, romeli unda gadavitano marcxena mxares tabze da desktopbze -->
     </header>
 
-    <div class="invoiceView">
+    <div class="invoiceView displayBlock">
       <div class="goBack">
-        <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
-        <span>Go back</span>
+        <a href="../../index.html">
+          <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
+          <span>Go back</span>
+        </a>
       </div>
       <div class="statusBox">
         <p>Status</p>
@@ -40,7 +48,7 @@
         </div>
       </div>
       <div class="invoiceSummary">
-        <h1>#XM9141</h1>
+        <h1 class="invoiceTitle">#XM9141</h1>
         <p class="projectDescription">Graphic Design</p>
         <div class="adressFrom">
           <p class="streetAdress">19 Union Terrace</p>
@@ -95,17 +103,19 @@
       </div>
     </div>
     <footer>
-      <div class="buttonsContainer2">
-        <button class="editBtn">Edit</button>
-        <button class="deleteBtn">Delete</button>
-        <button class="paidBtn">Mark as Paid</button>
+      <div class="buttonsBox2 displayBlock">
+        <div class="buttonsContainer2">
+          <button class="editBtn">Edit</button>
+          <button class="deleteBtn">Delete</button>
+          <button class="paidBtn">Mark as Paid</button>
+        </div>
       </div>
     </footer>
     <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
 
     <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
-    <main>
-      <h3>New Invoice</h3>
+    <main class="displayNone">
+      <h3>Edit #XM9141</h3>
       <p class="billTitle">Bill From</p>
       <form action="">
         <div class="labelAndInput">
@@ -205,11 +215,12 @@
       </form>
     </main>
     <footer>
-      <div class="linearBoxDiv"></div>
-      <div class="buttonsContainer">
-        <button class="discardBtn">Discard</button>
-        <button class="draftBtn">Save as Draft</button>
-        <button class="saveBtn">Save & Send</button>
+      <div class="linearBoxDiv displayNone"></div>
+      <div class="buttonsBox displayNone">
+        <div class="buttonsContainer">
+          <button class="cancelBtn">Cancel</button>
+          <button class="saveChangesBtn">Save Changes</button>
+        </div>
       </div>
     </footer>
   </body>

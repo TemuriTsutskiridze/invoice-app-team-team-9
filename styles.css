@@ -1,103 +1,97 @@
-@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap");
 
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-body{
-    background-color: #f8f8fb;
-    display: flex;
-    flex-direction: column;
-}
-   
-
-main{
-    padding: 2.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.invoice1{
-    display: flex;
-    flex-direction: column;
-    padding: 2.45rem;
-    background-color: white;
-    width: 32.7rem;
-    height: 13.4rem;
-    padding: 2.5rem;
-    gap: 2.4rem;
-}
-.invoice1 .code-name{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.invoice1 .code-name span{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0c0e16;
-}
-.invoice1 .code-name p{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #858bb2;
-}
-.invoice-secondary-source{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-.invoice1 .invoice-secondary-source span{
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: #7e88c3;
-}
-.invoice1 .invoice-secondary-source .date p{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #0c0e16;
-    line-height: 1.6;
-    letter-spacing: -0.025rem;
-}
-.invoice1 .date-price{
-    display: flex;
-    flex-direction: column;
-    gap: 0.9rem;
-}
-.invoice1 .pay-div{
-    width: 10.4rem;
-    height: 4rem;
-    border-radius: 6px;
-    background-color: #d4f0e6;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  
-}
-.invoice1 .oval{
-    width: 8px;
-    height: 8px;
-    background-color: #33d69f;
-    border-radius: 50%;
-
-}
-.invoice1 .oval-pay{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.8rem;
-}
-.invoice1 .oval-pay p{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color:#33d69f;
-    letter-spacing: -0.25px;
-
+body {
+  background-color: #f8f8fb;
+  display: flex;
+  flex-direction: column;
 }
 
-
+main {
+  padding: 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.invoice1 {
+  display: flex;
+  flex-direction: column;
+  padding: 2.45rem;
+  background-color: white;
+  width: 32.7rem;
+  height: 13.4rem;
+  padding: 2.5rem;
+  gap: 2.4rem;
+}
+.invoice1 .code-name {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.invoice1 .code-name span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c0e16;
+}
+.invoice1 .code-name p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #858bb2;
+}
+.invoice-secondary-source {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.invoice1 .invoice-secondary-source span {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #7e88c3;
+}
+.invoice1 .invoice-secondary-source .date p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c0e16;
+  line-height: 1.6;
+  letter-spacing: -0.025rem;
+}
+.invoice1 .date-price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.invoice1 .pay-div {
+  width: 10.4rem;
+  height: 4rem;
+  border-radius: 6px;
+  background-color: #d4f0e6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.invoice1 .oval {
+  width: 8px;
+  height: 8px;
+  background-color: #33d69f;
+  border-radius: 50%;
+}
+.invoice1 .oval-pay {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.8rem;
+}
+.invoice1 .oval-pay p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #33d69f;
+  letter-spacing: -0.25px;
+}
 
 /* ინვოისების ჩამონათვალის სტილები დაწერეთ ამ კომენტარის მაღლა  */
 
