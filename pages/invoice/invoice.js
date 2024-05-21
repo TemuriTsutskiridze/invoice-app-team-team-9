@@ -72,3 +72,21 @@ cancelBtn.addEventListener("click", () => {
   buttonsBox.classList.replace("displayBlock", "displayNone");
   linearBoxDiv.classList.replace("displayBlock", "displayNone");
 });
+
+// delete prompts rac exeba
+
+
+let prompt = document.querySelector(".prompt");
+
+
+
+deleteBtn.addEventListener("click",()=>{
+  prompt.style.display="block";
+  invoiceView.style.opacity="0.5";
+  invoiceView.style.backgroundColor="#000";
+  statusBox.style.backgroundColor="#000";
+  invoiceSummary.style.backgroundColor="#000";
+  orderSummaryBox[0].style.backgroundColor="#000";
+  orderSummaryBox[1].style.backgroundColor="#000";
+  
+})
