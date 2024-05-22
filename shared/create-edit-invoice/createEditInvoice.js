@@ -1,4 +1,3 @@
-// let moon = document.querySelector(".moonIcon");
 let label = document.querySelectorAll("label");
 let buttonsContainer = document.querySelector(".buttonsContainer");
 let linearBoxDiv = document.querySelector(".linearBoxDiv");
@@ -11,7 +10,6 @@ let statusBox = document.querySelector(".statusBox");
 let invoiceSummary = document.querySelector(".invoiceSummary");
 let invoiceTitle = document.querySelector(".invoiceTitle");
 let invoiceDate = document.querySelector(".invoiceDate");
-let clientName = document.querySelector(".clientName");
 let orderSummaryBox = document.querySelectorAll(".orderSummaryBox");
 let orderTotalBox = document.querySelector(".orderTotalBox");
 let buttonsContainer2 = document.querySelector(".buttonsContainer2");
@@ -21,29 +19,75 @@ let newDiv = document.querySelector(".new-div");
 let indexMain = document.querySelector(".indexMain");
 let createInvoiceMain = document.querySelector(".createInvoiceMain");
 let headerMain = document.querySelector(".header-main");
+let saveChangesBtn = document.querySelector(".saveChangesBtn");
 
-//input selection
+//inputs selections
+let clientName = document.querySelector("#toClientName");
+let fromStreetAdress = document.querySelector("#fromStreetAdress");
+let fromCity = document.querySelector("#fromCity");
+let fromPostCode = document.querySelector("#fromPostCode");
+let fromCountry = document.querySelector("#fromCountry");
+let toClientName = document.querySelector("#toClientName");
+let clientStreetAdress = document.querySelector("#clientStreetAdress");
+let toCity = document.querySelector("#toCity");
+let toPostCode = document.querySelector("#toPostCode");
+let toCountry = document.querySelector("#toCountry");
+let paymentTerms = document.querySelector("#paymentTerms");
+let projectDescription = document.querySelector("#projectDescription");
+let itemName = document.querySelector("#itemName");
+let qty = document.querySelector("#qty");
+let price = document.querySelector("#price");
+let total = document.querySelector("#total");
+let clientEmail = document.querySelector("#clientEmail");
+let invoiceDateID = document.querySelector("#invoiceDate");
 
-let streetAddress = document.querySelector('[name="streetAdress"]');
-let city = document.querySelector('[name="city"]');
-let postCode = document.querySelector('[name="postCode"]');
-let country = document.querySelector('[name="country"]');
-let clientEmail = document.querySelector('[name="clientEmail"]');
-let toStreetAdress = document.querySelector('[name="toStreetAdress"]');
-let toCity = document.querySelector('[name="toCity"]');
-let toPostCode = document.querySelector('[name="toPostCode"]');
-let toCountry = document.querySelector('[name="toCountry"]');
-let paymentTerms = document.querySelector('[name="paymentTerms"]');
-let projectDescription = document.querySelector('[name="projectDescription"]');
-let itemName = document.querySelector('[name="itemName"]');
-let qty = document.querySelector('[name="qty"]');
-let price = document.querySelector('[name="price"]');
-let total = document.querySelector('[name="total"]');
-streetAddress.style.color = "red";
+//adding new item functionality
+
+async function addNewInvoice() {
+  const response = await fetch(
+    "https://invoiceapi-rpgn.onrender.com/api/invoices",
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        item_list: [
+          {
+            name: itemName.value,
+            price: price.value,
+            quantity: qty.value,
+          },
+        ],
+        serial_number: "string",
+        status: "pending",
+        description: projectDescription.value,
+        sender_username: clientName.value,
+        sender_email: "user@example.com",
+        sender_country: toCountry.value,
+        sender_city: fromCity.value,
+        sender_street_address: fromStreetAdress.value,
+        sender_postcode: toPostCode.value,
+        reciever_username: clientName.value,
+        reciever_email: clientEmail.value,
+        reciever_country: toCountry.value,
+        reciever_city: toCity.value,
+        reciever_street_address: clientStreetAdress.value,
+        reciever_postcode: toPostCode.value,
+        payment_terms: paymentTerms.value,
+        payment_start_date: "2024-05-20",
+        payment_end_date: "2024-05-20",
+      }),
+    }
+  );
+  const data = await response.json();
+}
+
+// addNewInvoice();
+
 //for dark mode functionality
 // moon.addEventListener("click", () => {
 //   input.forEach((el) => el.classList.toggle("input-dark-mode"));
-//   label.forEach((el) => el.classList.toggle("label-dark-mode"));
 //   main.classList.toggle("dark-mode");
 //   addNewItem.classList.toggle("dark-mode");
 //   addNewItem.classList.toggle("dark-mode-dark-blue");
@@ -88,6 +132,7 @@ cancelBtn.addEventListener("click", () => {
   createInvoiceMain.classList.replace("displayBlock", "displayNone");
   buttonsBox.classList.replace("displayBlock", "displayNone");
   linearBoxDiv.classList.replace("displayBlock", "displayNone");
+  addNewInvoice();
 });
 
 newDiv.addEventListener("click", () => {
@@ -96,4 +141,10 @@ newDiv.addEventListener("click", () => {
   createInvoiceMain.classList.replace("displayNone", "displayBlock");
   buttonsBox.classList.replace("displayNone", "displayBlock");
   linearBoxDiv.classList.replace("displayNone", "displayBlock");
+});
+
+projectDescription.style.color = "red";
+
+saveChangesBtn.addEventListener("click", () => {
+  addNewInvoice();
 });

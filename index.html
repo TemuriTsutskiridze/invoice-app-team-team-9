@@ -83,82 +83,86 @@
       <form action="">
         <div class="labelAndInput">
           <label for="streetAdress">Street Address</label>
-          <input type="text" name="streetAdress" />
+          <input type="text" name="streetAdress" id="fromStreetAdress" />
         </div>
 
         <div class="cityAndPostCode">
           <div class="labelAndInput">
             <label for="city">City</label>
-            <input type="text" name="city" />
+            <input type="text" name="city" id="fromCity" />
           </div>
           <div class="labelAndInput">
             <label for="postCode">Post Code</label>
-            <input type="text" name="postCode" />
+            <input type="text" name="postCode" id="fromPostCode" />
           </div>
         </div>
         <div class="labelAndInput">
           <label for="country">Country</label>
-          <input type="text" name="country" />
+          <input type="text" name="country" id="fromCountry" />
         </div>
 
         <p class="billTitle">Bill to</p>
         <div class="labelAndInput">
           <label for="clientName">Client’s Name</label>
-          <input type="text" name="clientName" />
+          <input type="text" name="clientName" id="toClientName" />
         </div>
         <div class="labelAndInput">
           <label for="clientEmail">Client’s Email</label>
-          <input type="text" name="clientEmail" />
+          <input type="text" name="clientEmail" id="clientEmail" />
         </div>
         <div class="labelAndInput">
           <label for="toStreetAdress">Street Address</label>
-          <input type="text" name="toStreetAdress" />
+          <input type="text" name="toStreetAdress" id="clientStreetAdress" />
         </div>
 
         <div class="cityAndPostCode">
           <div class="labelAndInput">
             <label for="toCity">City</label>
-            <input type="text" name="toCity" />
+            <input type="text" name="toCity" id="toCity" />
           </div>
           <div class="labelAndInput">
             <label for="toPostCode">Post Code</label>
-            <input type="text" name="toPostCode" />
+            <input type="text" name="toPostCode" id="toPostCode" />
           </div>
         </div>
         <div class="labelAndInput">
           <label for="toCountry">Country</label>
-          <input type="text" name="toCountry" />
+          <input type="text" name="toCountry" id="toCountry" />
         </div>
 
         <div class="labelAndInput">
           <label for="invoiceDate">Invoice Date</label>
-          <input type="date" name="invoiceDate" />
+          <input type="date" name="invoiceDate" id="invoiceDate" />
         </div>
         <div class="labelAndInput">
           <label for="paymentTerms">Payment Terms</label>
-          <input type="text" name="paymentTerms" />
+          <input type="text" name="paymentTerms" id="paymentTerms" />
         </div>
         <div class="labelAndInput">
           <label for="projectDescription">Project Description</label>
-          <input type="text" name="projectDescription" />
+          <input
+            type="text"
+            name="projectDescription"
+            id="projectDescription"
+          />
         </div>
 
         <p class="itemList">Item List</p>
         <div class="itemContainer">
           <div class="labelAndInput">
             <label for="itemName">Item Name</label>
-            <input type="text" name="itemName" />
+            <input type="text" name="itemName" id="itemName" />
           </div>
           <div class="qtyTotalPriceContainer">
             <div class="quantityTotalPrice">
               <div class="labelAndInput qtyBox">
                 <label class="qtyBox" for="qty">Qty.</label>
-                <input type="text" name="qty" />
+                <input type="text" name="qty" id="qty" />
               </div>
 
               <div class="labelAndInput">
                 <label for="price ">Price</label>
-                <input class="priceBox" type="text " name="price" />
+                <input class="priceBox" type="text " name="price" id="price" />
               </div>
 
               <div class="labelAndInput">
@@ -168,9 +172,13 @@
                   type="text"
                   placeholder="150"
                   name="total"
+                  id="total"
                 />
               </div>
-              <img src="../../assets/icon-delete.svg" alt="delete button" />
+              <img
+                src="../invoice-app-team-team-9/assets/icon-delete.svg"
+                alt="delete button"
+              />
             </div>
           </div>
         </div>
