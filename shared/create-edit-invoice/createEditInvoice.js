@@ -21,7 +21,7 @@ let createInvoiceMain = document.querySelector(".createInvoiceMain");
 let headerMain = document.querySelector(".header-main");
 let saveChangesBtn = document.querySelector(".saveChangesBtn");
 
-//inputs selections
+// //inputs selections
 let clientName = document.querySelector("#toClientName");
 let fromStreetAdress = document.querySelector("#fromStreetAdress");
 let fromCity = document.querySelector("#fromCity");
@@ -63,24 +63,28 @@ async function addNewInvoice() {
         status: "pending",
         description: projectDescription.value,
         sender_username: clientName.value,
-        sender_email: "user@example.com",
-        sender_country: toCountry.value,
+        sender_email: `${Math.random() * 100}@gmail.com`,
+        sender_country: fromCountry.value,
         sender_city: fromCity.value,
         sender_street_address: fromStreetAdress.value,
-        sender_postcode: toPostCode.value,
-        reciever_username: clientName.value,
+        sender_postcode: fromPostCode.value,
+        reciever_username: toClientName.value,
         reciever_email: clientEmail.value,
         reciever_country: toCountry.value,
         reciever_city: toCity.value,
         reciever_street_address: clientStreetAdress.value,
         reciever_postcode: toPostCode.value,
         payment_terms: paymentTerms.value,
-        payment_start_date: "2024-05-20",
-        payment_end_date: "2024-05-20",
+        payment_start_date: invoiceDateID.value,
+        payment_end_date: "2024-05-22",
       }),
     }
   );
+
   const data = await response.json();
+  console.log(response);
+  console.log(data);
+  console.log(body);
 }
 
 // addNewInvoice();
@@ -132,7 +136,6 @@ cancelBtn.addEventListener("click", () => {
   createInvoiceMain.classList.replace("displayBlock", "displayNone");
   buttonsBox.classList.replace("displayBlock", "displayNone");
   linearBoxDiv.classList.replace("displayBlock", "displayNone");
-  addNewInvoice();
 });
 
 newDiv.addEventListener("click", () => {
