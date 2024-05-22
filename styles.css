@@ -99,4 +99,41 @@ main {
 
 /* ინვოისების ჩამონათვალის სტილები დაწერეთ ამ კომენტარის მაღლა  */
 
+
+/* empty invoices styles is down */
+
+
+.invoice-empty{
+  display: none;
+  position: absolute;
+  transform: translate(50%,50%);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: auto;
+  margin-bottom: 50%;
+
+}
+.invoice-empty img{
+  width: 19.31rem;
+  height: 16rem;
+}
+.invoice-empty h1{
+  font-size: 2.4rem;
+font-weight: bold;
+color: #0c0e16;
+letter-spacing: -0.75px;
+margin-top: 4.2rem;
+}
+.invoice-empty p{
+  max-width: 17.6rem;
+  font-size: 1.3rem;
+font-weight: 500;
+color: #888eb0;
+line-height: 1.15;
+margin-top: 2.3rem;
+}
+
+
 /* ინვოისის შექმნის სტილები დაწერეთ ამ კომენტარის ქვევით */
