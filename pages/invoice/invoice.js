@@ -77,6 +77,8 @@ cancelBtn.addEventListener("click", () => {
 
 
 let prompt = document.querySelector(".prompt");
+let cancelPrompt = document.querySelector(".cancel")
+let delete2 = document.querySelector(".delete")
 
 
 
@@ -88,5 +90,25 @@ deleteBtn.addEventListener("click",()=>{
   invoiceSummary.style.backgroundColor="#000";
   orderSummaryBox[0].style.backgroundColor="#000";
   orderSummaryBox[1].style.backgroundColor="#000";
+ 
+
+
+    delete2.addEventListener("click",()=>{
+
+    })
+  
   
 })
+
+
+
+cancelPrompt.addEventListener("click",()=>{
+  prompt.style.display="none";
+  invoiceView.style.opacity="1";
+invoiceView.style.backgroundColor="white";
+statusBox.style.backgroundColor="white";
+invoiceSummary.style.backgroundColor="white";
+orderSummaryBox[0].style.backgroundColor="white";
+orderSummaryBox[1].style.backgroundColor="white";
+})
+
