@@ -168,7 +168,6 @@ deleteBtn.addEventListener("click", () => {
   invoiceSummary.style.backgroundColor = "#000";
   orderSummaryBox[0].style.backgroundColor = "#000";
   orderSummaryBox[1].style.backgroundColor = "#000";
-  delete2.addEventListener("click", () => {});
 });
 
 cancelPrompt.addEventListener("click", () => {
@@ -193,4 +192,10 @@ async function removeInvoice() {
       },
     }
   );
+  console.log(response);
 }
+
+delete2.addEventListener("click", () => {
+  removeInvoice();
+  window.location.href = "../../index.html";
+});

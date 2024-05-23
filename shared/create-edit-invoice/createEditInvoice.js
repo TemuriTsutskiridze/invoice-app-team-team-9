@@ -77,7 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const itemName = document.querySelector("#itemName");
     const price = document.querySelector("#price");
     const qty = document.querySelector("#qty");
-    const clientName = document.querySelector("#toClientName");
     const projectDescription = document.querySelector("#projectDescription");
     const fromCountry = document.querySelector("#fromCountry");
     const fromCity = document.querySelector("#fromCity");
@@ -110,7 +109,7 @@ document.addEventListener("DOMContentLoaded", () => {
           serial_number: "string",
           status: "pending",
           description: projectDescription.value,
-          sender_username: clientName.value,
+          sender_username: `${Math.random() * 10}`,
           sender_email: `${Math.random() * 100}@gmail.com`,
           sender_country: fromCountry.value,
           sender_city: fromCity.value,
