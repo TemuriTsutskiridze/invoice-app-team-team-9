@@ -13,6 +13,7 @@ body {
 }
 .indexMain{
   display: flex;
+  gap: 1rem;
 }
 main {
   padding: 2.4rem;
