@@ -45,8 +45,11 @@ document.addEventListener("DOMContentLoaded", function () {
     linearBoxDiv.classList.replace("displayBlock", "displayNone");
   });
   async function getInvoiceDetails() {
+    const urlParams = new URLSearchParams(window.location.search);
+    let id = urlParams.get("id");
+    console.log(id);
     const response = await fetch(
-      "https://invoiceapi-rpgn.onrender.com/api/invoices/17"
+      `https://invoiceapi-rpgn.onrender.com/api/invoices/${id}`
     );
     const data = await response.json();
 
@@ -154,40 +157,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // delete prompts rac exeba
 
-
 let prompt = document.querySelector(".prompt");
-let cancelPrompt = document.querySelector(".cancel")
-let delete2 = document.querySelector(".delete")
+let cancelPrompt = document.querySelector(".cancel");
+let delete2 = document.querySelector(".delete");
 
+deleteBtn.addEventListener("click", () => {
+  prompt.style.display = "block";
+  invoiceView.style.opacity = "0.5";
+  invoiceView.style.backgroundColor = "#000";
+  statusBox.style.backgroundColor = "#000";
+  invoiceSummary.style.backgroundColor = "#000";
+  orderSummaryBox[0].style.backgroundColor = "#000";
+  orderSummaryBox[1].style.backgroundColor = "#000";
 
+  delete2.addEventListener("click", () => {});
+});
 
-deleteBtn.addEventListener("click",()=>{
-  prompt.style.display="block";
-  invoiceView.style.opacity="0.5";
-  invoiceView.style.backgroundColor="#000";
-  statusBox.style.backgroundColor="#000";
-  invoiceSummary.style.backgroundColor="#000";
-  orderSummaryBox[0].style.backgroundColor="#000";
-  orderSummaryBox[1].style.backgroundColor="#000";
- 
+cancelPrompt.addEventListener("click", () => {
+  prompt.style.display = "none";
+  invoiceView.style.opacity = "1";
+  invoiceView.style.backgroundColor = "white";
+  statusBox.style.backgroundColor = "white";
+  invoiceSummary.style.backgroundColor = "white";
+  orderSummaryBox[0].style.backgroundColor = "white";
+  orderSummaryBox[1].style.backgroundColor = "white";
+});
 
-
-    delete2.addEventListener("click",()=>{
-
-    })
-  
-  
-})
-
-
-
-cancelPrompt.addEventListener("click",()=>{
-  prompt.style.display="none";
-  invoiceView.style.opacity="1";
-invoiceView.style.backgroundColor="white";
-statusBox.style.backgroundColor="white";
-invoiceSummary.style.backgroundColor="white";
-orderSummaryBox[0].style.backgroundColor="white";
-orderSummaryBox[1].style.backgroundColor="white";
-})
-
+async function removeInvoice() {
+  const response = await fetch(
+    "https://invoiceapi-rpgn.onrender.com/api/invoices",
+    {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }
+  );
+}
