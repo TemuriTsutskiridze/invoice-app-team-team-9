@@ -29,13 +29,20 @@ document.addEventListener("DOMContentLoaded", function () {
   let paidBtn = document.querySelector(".paidBtn");
 
   editBtn.addEventListener("click", () => {
-    toggleView();
+    invoiceView.classList.replace("displayBlock", "displayNone");
+    buttonsBox2.classList.replace("displayBlock", "displayNone");
+    main.classList.replace("displayNone", "displayBlock");
+    buttonsBox.classList.replace("displayNone", "displayBlock");
+    linearBoxDiv.classList.replace("displayNone", "displayBlock");
   });
 
   cancelBtn.addEventListener("click", () => {
-    toggleView();
+    invoiceView.classList.replace("displayNone", "displayBlock");
+    buttonsBox2.classList.replace("displayNone", "displayBlock");
+    main.classList.replace("displayBlock", "displayNone");
+    buttonsBox.classList.replace("displayBlock", "displayNone");
+    linearBoxDiv.classList.replace("displayBlock", "displayNone");
   });
-
   async function getInvoiceDetails() {
     const urlParams = new URLSearchParams(window.location.search);
     let id = urlParams.get("id");
@@ -116,89 +123,74 @@ document.addEventListener("DOMContentLoaded", function () {
 
   getInvoiceDetails();
 
-  let deleteBtn = document.querySelector(".deleteBtn");
-  let prompt = document.querySelector(".prompt");
-  let cancelPrompt = document.querySelector(".cancel");
-  let delete2 = document.querySelector(".delete");
-
-  deleteBtn.addEventListener("click", () => {
-    prompt.style.display = "block";
-    toggleView(false);
-    toggleDarkMode(true);
-  });
-
-  cancelPrompt.addEventListener("click", () => {
-    prompt.style.display = "none";
-    toggleView(true);
-    toggleDarkMode(false);
-  });
-
-  async function removeInvoice() {
-    const urlParams = new URLSearchParams(window.location.search);
-    let id = urlParams.get("id");
-    const response = await fetch(
-      `https://invoiceapi-rpgn.onrender.com/api/invoices/${id}`,
-      {
-        method: "DELETE",
-        headers: {
-          "Content-type": "application/json",
-        },
-      }
-    );
-  }
-
-  function toggleView(showInvoice = true) {
-    if (showInvoice) {
-      invoiceView.classList.replace("displayNone", "displayBlock");
-      buttonsBox2.classList.replace("displayNone", "displayBlock");
-      main.classList.replace("displayBlock", "displayNone");
-      buttonsBox.classList.replace("displayBlock", "displayNone");
-      linearBoxDiv.classList.replace("displayBlock", "displayNone");
-    } else {
-      invoiceView.classList.replace("displayBlock", "displayNone");
-      buttonsBox2.classList.replace("displayBlock", "displayNone");
-      main.classList.replace("displayNone", "displayBlock");
-      buttonsBox.classList.replace("displayNone", "displayBlock");
-      linearBoxDiv.classList.replace("displayNone", "displayBlock");
-    }
-  }
-
-  function toggleDarkMode(enableDarkMode) {
-    document.body.classList.toggle("dark-mode", enableDarkMode);
-    input.forEach((el) => el.classList.toggle("input-dark-mode"));
-    label.forEach((el) => el.classList.toggle("label-dark-mode"));
-    addNewItem.classList.toggle("dark-mode", enableDarkMode);
-    addNewItem.classList.toggle("dark-mode-dark-blue", enableDarkMode);
-    addNewItem.classList.toggle("input-dark-mode-bgc", enableDarkMode);
-    linearBoxDiv.classList.toggle("dark-mode", enableDarkMode);
-    buttonsContainer.classList.toggle("invoice-dark-mode", enableDarkMode);
-    cancelBtn.classList.toggle("input-dark-mode-bgc", enableDarkMode);
-    invoiceView.classList.toggle("dark-mode", enableDarkMode);
-    statusBox.classList.toggle("invoice-dark-mode", enableDarkMode);
-    invoiceSummary.classList.toggle("invoice-dark-mode", enableDarkMode);
-    invoiceSummary.classList.toggle("dark-mode-light", enableDarkMode);
-    invoiceTitle.classList.toggle("dark-mode-white", enableDarkMode);
-    invoiceDate.classList.toggle("dark-mode-white", enableDarkMode);
-    paymentTerms.classList.toggle("dark-mode-white", enableDarkMode);
-    orderSummaryBox.forEach((el) =>
-      el.classList.toggle("input-dark-mode", enableDarkMode)
-    );
-    clientName.classList.toggle("dark-mode-white", enableDarkMode);
-    itemName.forEach((el) =>
-      el.classList.toggle("dark-mode-white", enableDarkMode)
-    );
-    total.forEach((el) =>
-      el.classList.toggle("dark-mode-white", enableDarkMode)
-    );
-    clientEmail.classList.toggle("dark-mode-white", enableDarkMode);
-    orderTotalBox.classList.toggle("dark-mode-dark", enableDarkMode);
-    buttonsContainer2.classList.toggle("invoice-dark-mode", enableDarkMode);
-  }
-
   //for dark mode functionality
   moon.addEventListener("click", () => {
-    toggleDarkMode(
-      document.body.classList.contains("dark-mode") ? false : true
-    );
+    input.forEach((el) => el.classList.toggle("input-dark-mode"));
+    label.forEach((el) => el.classList.toggle("label-dark-mode"));
+    main.classList.toggle("dark-mode");
+    addNewItem.classList.toggle("dark-mode");
+    addNewItem.classList.toggle("dark-mode-dark-blue");
+    addNewItem.classList.toggle("input-dark-mode-bgc");
+    linearBoxDiv.classList.toggle("dark-mode");
+    linearBoxDiv.style.border = "0";
+    buttonsContainer.classList.toggle("invoice-dark-mode");
+    cancelBtn.classList.toggle("input-dark-mode-bgc");
+    invoiceView.classList.toggle("dark-mode");
+    statusBox.classList.toggle("invoice-dark-mode");
+    invoiceSummary.classList.toggle("invoice-dark-mode");
+    invoiceSummary.classList.toggle("dark-mode-light");
+    invoiceTitle.classList.toggle("dark-mode-white");
+    invoiceDate.classList.toggle("dark-mode-white");
+    paymentTerms.classList.toggle("dark-mode-white");
+    orderSummaryBox.forEach((el) => el.classList.toggle("input-dark-mode"));
+    clientName.classList.toggle("dark-mode-white");
+    itemName.forEach((el) => el.classList.toggle("dark-mode-white"));
+    total.forEach((el) => el.classList.toggle("dark-mode-white"));
+    clientEmail.classList.toggle("dark-mode-white");
+    orderTotalBox.classList.toggle("dark-mode-dark");
+    buttonsContainer2.classList.toggle("invoice-dark-mode");
+    moon;
   });
 });
+
+// delete prompts rac exeba
+
+let deleteBtn = document.querySelector(".deleteBtn");
+let prompt = document.querySelector(".prompt");
+let cancelPrompt = document.querySelector(".cancel");
+let delete2 = document.querySelector(".delete");
+
+deleteBtn.addEventListener("click", () => {
+  prompt.style.display = "block";
+  invoiceView.style.opacity = "0.5";
+  invoiceView.style.backgroundColor = "#000";
+  statusBox.style.backgroundColor = "#000";
+  invoiceSummary.style.backgroundColor = "#000";
+  orderSummaryBox[0].style.backgroundColor = "#000";
+  orderSummaryBox[1].style.backgroundColor = "#000";
+  delete2.addEventListener("click", () => {});
+});
+
+cancelPrompt.addEventListener("click", () => {
+  prompt.style.display = "none";
+  invoiceView.style.opacity = "1";
+  invoiceView.style.backgroundColor = "white";
+  statusBox.style.backgroundColor = "white";
+  invoiceSummary.style.backgroundColor = "white";
+  orderSummaryBox[0].style.backgroundColor = "white";
+  orderSummaryBox[1].style.backgroundColor = "white";
+});
+
+async function removeInvoice() {
+  const urlParams = new URLSearchParams(window.location.search);
+  let id = urlParams.get("id");
+  const response = await fetch(
+    `https://invoiceapi-rpgn.onrender.com/api/invoices/${id}`,
+    {
+      method: "DELETE",
+      headers: {
+        "Content-type": "application/json",
+      },
+    }
+  );
+}
