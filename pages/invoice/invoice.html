@@ -12,6 +12,10 @@
     <link rel="stylesheet" href="../../shared/header.css" />
     <link rel="stylesheet" href="./invoice.css" />
     <script src="./invoice.js" defer></script>
+    <script
+      src="../../shared/create-edit-invoice/createEditInvoice.js"
+      defer
+    ></script>
 
     <title>Document</title>
   </head>
@@ -19,18 +23,19 @@
     <header class="mainHeader">
       <div class="header-div">
         <div class="header-logo">
-          <img src="../../assets/logo.svg" alt="icon">
+          <img src="../../assets/logo.svg" alt="icon" />
         </div>
         <div class="avatar-moon">
-
-         <img class="moon" src="../../assets/icon-moon.svg" alt="icon-moon">
-         <div class="avatar-cont">
-           <img class="avatar" src="../../assets/image-avatar.jpg" alt="image-avatar">
-         </div>
-           
-
-         </div>
-     </div>
+          <img class="moon" src="../../assets/icon-moon.svg" alt="icon-moon" />
+          <div class="avatar-cont">
+            <img
+              class="avatar"
+              src="../../assets/image-avatar.jpg"
+              alt="image-avatar"
+            />
+          </div>
+        </div>
+      </div>
       <!-- aqamde aris mobail versiis headeris divi, romeli unda gadavitano marcxena mxares tabze da desktopbze -->
     </header>
 
@@ -40,67 +45,6 @@
           <img src="../../assets/icon-arrow-left.svg" alt="arrow left" />
           <span>Go back</span>
         </a>
-      </div>
-      <div class="statusBox">
-        <p>Status</p>
-        <div class="statusBox-state">
-          <div class="oval"></div>
-          <p>Pending</p>
-        </div>
-      </div>
-      <div class="invoiceSummary">
-        <h1 class="invoiceTitle">#XM9141</h1>
-        <p class="projectDescription">Graphic Design</p>
-        <div class="adressFrom">
-          <p class="streetAdress">19 Union Terrace</p>
-          <p class="city">London</p>
-          <p class="postCode">E1 3EZ</p>
-          <p class="country">United Kingdom</p>
-        </div>
-        <div class="billToBox">
-          <div class="invoiceDatesBox">
-            <div class="invoiceDateBox">
-              <p>Invoice Date</p>
-              <p class="invoiceDate">21 Aug 2021</p>
-            </div>
-            <div class="paymentDue">
-              <p>Payment Due</p>
-              <p class="paymentTerms">20 Sep 2021</p>
-            </div>
-          </div>
-          <div class="billToDetailsBox">
-            <p class="billToTitle">Bill To</p>
-            <p class="clientName">Alex Grim</p>
-            <p class="toStreetAdress">84 Church Way</p>
-            <p class="toCity">Bradford</p>
-            <p class="toPostCode">BD1 9PB</p>
-            <p class="toCountry">United Kingdom</p>
-          </div>
-        </div>
-        <div class="sentToEmailBox">
-          <p class="sentToTitle">Sent to</p>
-          <p class="clientEmail">alexgrim@mail.com</p>
-        </div>
-        <div class="orderSummaryBox">
-          <div class="titleAndUnitBox">
-            <p class="itemName">Banner Design</p>
-            <p class="qty">1 x £ 156.00</p>
-          </div>
-          <div class="priceBoxCont"><p class="total">£ 156.00</p></div>
-        </div>
-        <div class="orderSummaryBox">
-          <div class="titleAndUnitBox">
-            <p class="itemName">Banner Design</p>
-            <p class="qty">1 x £ 156.00</p>
-          </div>
-          <div class="priceBoxCont"><p class="total">£ 156.00</p></div>
-        </div>
-        <div class="orderTotalBox">
-          <div class="grandTotalBox">
-            <p>Grand Total</p>
-            <p class="grandTotal">£ 556.00</p>
-          </div>
-        </div>
       </div>
     </div>
     <footer>
@@ -115,31 +59,33 @@
     <!-- ინვოისის ფეიჯის სტრუქტურა დაწერეთ ამ კომენტარის მაღლა -->
 
     <!-- ინვოისის დაედიტების სტრუქტურა დაწერეთ ამ კომენტარის ქვევით -->
-      <!-- delete promptis divis dasawyisi -->
-      <div class="prompt">
-        <h1>Confirm Deletion</h1>
-        <p>Are you sure you want to delete invoice #XM9141? This action cannot be undone.</p>
-        <div class="buttons">
-            <button class="cancel">cancel</button>
-            <button class="delete">delete</button>
-        </div>
+    <!-- delete promptis divis dasawyisi -->
+    <div class="prompt">
+      <h1>Confirm Deletion</h1>
+      <p>
+        Are you sure you want to delete invoice #XM9141? This action cannot be
+        undone.
+      </p>
+      <div class="buttons">
+        <button class="cancel">cancel</button>
+        <button class="delete">delete</button>
+      </div>
     </div>
 
-
-      <!--  delete promptis divis dasasruli -->
+    <!--  delete promptis divis dasasruli -->
     <main class="displayNone">
       <h3>Edit #XM9141</h3>
       <p class="billTitle">Bill From</p>
       <form action="">
         <div class="labelAndInput">
           <label for="streetAdress">Street Address</label>
-          <input type="text" name="streetAdress" />
+          <input class="" type="text" name="streetAdress" />
         </div>
 
         <div class="cityAndPostCode">
           <div class="labelAndInput">
             <label for="city">City</label>
-            <input type="text" name="city" />
+            <input type="text" name="city" class="fromCity" />
           </div>
           <div class="labelAndInput">
             <label for="postCode">Post Code</label>
@@ -154,11 +100,11 @@
         <p class="billTitle">Bill to</p>
         <div class="labelAndInput">
           <label for="clientName">Client’s Name</label>
-          <input type="text" name="clientName" />
+          <input type="text" name="clientName" id="clientName" />
         </div>
         <div class="labelAndInput">
           <label for="clientEmail">Client’s Email</label>
-          <input type="text" name="clientEmail" />
+          <input type="text" name="clientEmail" id="clientEmail" />
         </div>
         <div class="labelAndInput">
           <label for="toStreetAdress">Street Address</label>
@@ -226,8 +172,6 @@
         </div>
         <button class="addNewItem">+ Add New Item</button>
       </form>
-
-    
     </main>
     <footer>
       <div class="linearBoxDiv displayNone"></div>
