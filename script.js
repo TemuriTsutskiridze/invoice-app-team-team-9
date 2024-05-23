@@ -42,12 +42,12 @@ async function fetchData() {
             <div class="invoice1">
             <div class="code-name">
               <span>#RT3080</span>
-              <p>${invoice.reciever_username}</p>
+              <p> £ ${invoice.reciever_username}</p>
             </div>
             <div class="invoice-secondary-source">
               <div class="date-price">
-                <span>${invoice.payment_start_date}</span>
-                <p>${invoice.item_total_price}</p>
+                <span> £ ${invoice.payment_start_date}</span>
+                <p> £ ${invoice.item_total_price}</p>
               </div>
               <div class="pay-div">
                 <div class="oval-pay">

@@ -112,3 +112,11 @@ orderSummaryBox[0].style.backgroundColor="white";
 orderSummaryBox[1].style.backgroundColor="white";
 })
 
+async function removeInvoice(){
+  const response = await fetch("https://invoiceapi-rpgn.onrender.com/api/invoices",{
+    method:"DELETE",
+    headers:{
+      "Content-type": "application/json"
+  };
+  }};
+  const data = await response.json();
